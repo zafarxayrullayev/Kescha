@@ -26,7 +26,7 @@ namespace Kescha
                 case 1:
                     Console.Write("Yoshni tanladingiz, yoshni kiriting! ");
                     keschaAge = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine($"Yosh farqi {age - keschaAge} ga teng.");
+                    Console.WriteLine($"Yosh farqi {Math.Abs(age - keschaAge)} ga teng.");
                     break;
                 case 2:
                     Console.Write("Yilni tanladingiz, yilini kiriting! ");
@@ -43,6 +43,19 @@ namespace Kescha
                     break;
                 default:
                     break;
+            }
+
+            if (age < keschaAge)
+            {
+                Console.WriteLine("You are younger than Kescha");
+            }
+            else if (age == keschaAge)
+            {
+                Console.WriteLine("You are equal");
+            }
+            else 
+            {
+                Console.WriteLine("You are older than Kescha");
             }
         }
     }
