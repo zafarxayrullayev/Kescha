@@ -1,0 +1,8 @@
+D:\MyC#\kescha\Kescha\Kescha\bin\Debug\Kescha.exe.config
+D:\MyC#\kescha\Kescha\Kescha\bin\Debug\Kescha.exe
+D:\MyC#\kescha\Kescha\Kescha\bin\Debug\Kescha.pdb
+D:\MyC#\kescha\Kescha\Kescha\obj\Debug\Kescha.csproj.AssemblyReference.cache
+D:\MyC#\kescha\Kescha\Kescha\obj\Debug\Kescha.csproj.SuggestedBindingRedirects.cache
+D:\MyC#\kescha\Kescha\Kescha\obj\Debug\Kescha.csproj.CoreCompileInputs.cache
+D:\MyC#\kescha\Kescha\Kescha\obj\Debug\Kescha.exe
+D:\MyC#\kescha\Kescha\Kescha\obj\Debug\Kescha.pdb
