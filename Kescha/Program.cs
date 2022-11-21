@@ -10,6 +10,13 @@ namespace Kescha
     {
         static void Main(string[] args)
         {
+            string password;
+
+            do
+            {
+                Console.WriteLine("Parolni kitit : ");
+                password = Console.ReadLine();
+            } while (password != "mykescha");
             Console.Write("Enter your name : ");
             string name = Console.ReadLine();
             Console.Write("Enter your first name : ");
