@@ -1,4 +1,5 @@
-﻿using Microsoft.SqlServer.Server;
+﻿using ClassLibrary1;
+using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,13 +29,15 @@ namespace Kescha
             Console.WriteLine("Sizning Keschangizning yoshi nechchida? yoki nechinchi yil tug'lgan?");
             Console.WriteLine("Yosh kiritsangiz 1 ni, yil kiritsangiz 2 ni kiriting!");
             int tanla = Convert.ToInt32(Console.ReadLine());
-            int keschaAge = int.MinValue, keschaBorn, nowYear;
+
+            Animal kescha = new Animal();
+            int keschaBorn, nowYear;
             switch (tanla)
             {
                 case 1:
                     Console.Write("Yoshni tanladingiz, yoshni kiriting! ");
-                    keschaAge = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine($"Yosh farqi {Math.Abs(age - keschaAge)} ga teng.");
+                    kescha.Age = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine($"Yosh farqi {Math.Abs(age - kescha.Age)} ga teng.");
                     break;
                 case 2:
                     Console.Write("Yilni tanladingiz, yilini kiriting! ");
@@ -53,11 +56,13 @@ namespace Kescha
                     break;
             }
 
-            if (age < keschaAge)
+            
+
+            if (age < kescha.Age)
             {
                 Console.WriteLine("You are younger than Kescha");
             }
-            else if (age == keschaAge)
+            else if (age == kescha.Age)
             {
                 Console.WriteLine("You are equal");
             }
