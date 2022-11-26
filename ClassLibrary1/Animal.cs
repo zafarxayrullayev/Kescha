@@ -11,13 +11,12 @@ namespace ClassLibrary1
     {
         public int Age { get; set; }
         public int AgeDifference { get; set; }
-        public int UserAge { get; set; }
         public string Name { get; set; }
         
         
         public void CalculateAgeDifference(int userAge, int animalAge)
         {
-            Console.WriteLine($"Sizning {Name} bilan yosh farqingiz {userAge - animalAge}");
+            Console.WriteLine($"Sizning {Name} bilan yosh farqingiz {Math.Abs(userAge - animalAge)}");
         }
         
         public void CompareAge(int userAge, int animalAge)
@@ -36,19 +35,22 @@ namespace ClassLibrary1
             }
         }
 
-        public void TellMeAboutFriends()
+        public void Greet(string name, string surname, int age)
         {
-            string[] friendsName = new string[100];
-            Console.WriteLine("Enter your friends name");
-            for (int i = 0; i < 3; i++)
-            {
-                friendsName[i] = Console.ReadLine();
-            }
+            Console.WriteLine($"Hello {name} {surname}, Sizning yoshingiz {age} da ekanligini endi men bilaman!");
+        }
+        public void TellMeAboutFriends(string userName)
+        {
+            string[] friendsName = new string[3];
 
-            for (int i = 0; i < 3; i++)
+            friendsName[0] = "Ali";
+            friendsName[1] = "Ma'mur";
+            friendsName[2] = userName;
+            foreach (string names in friendsName)
             {
-                Console.WriteLine($"{friendsName[i]},   ");
+                Console.Write($"{names},    ");
             }
+            Console.WriteLine("\n");
         }
 
     }
