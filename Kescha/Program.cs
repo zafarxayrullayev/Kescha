@@ -18,7 +18,7 @@ namespace Kescha
             {
                 Console.Write("Parolni kitit : ");
                 password = Console.ReadLine();
-            } while (password != "mykescha");
+            } while (password != "my");
             Console.Write("Enter your name : ");
             string name = Console.ReadLine();
             Console.Write("Enter your first name : ");
@@ -27,48 +27,19 @@ namespace Kescha
             int age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Hello {name} {firstName}, Sizning yoshingiz {age} da ekan");
 
-            Animal kescha = new Animal(userAge: age);
-            Console.WriteLine($"Sizning {kescha.Name} bilan yosh farqingiz {kescha.AgeDifference} ga teng");
-            //int tanla = Convert.ToInt32(Console.ReadLine());
-            //int keschaBorn, nowYear;
-            //switch (tanla)
-            //{
-            //    case 1:
-            //        Console.Write("Yoshni tanladingiz, yoshni kiriting! ");
-            //        kescha.Age = Convert.ToInt32(Console.ReadLine());
-            //        Console.WriteLine($"Yosh farqi {Math.Abs(age - kescha.Age)} ga teng.");
-            //        break;
-            //    case 2:
-            //        Console.Write("Yilni tanladingiz, yilini kiriting! ");
-            //    z:
-            //        keschaBorn = Convert.ToInt32(Console.ReadLine());
-            //        Console.Write("Hozirgi yilni kiriting! ");
-            //        nowYear = Convert.ToInt32(Console.ReadLine());
-            //        if (nowYear < keschaBorn)
-            //        {
-            //            Console.WriteLine("Hozirgi yil tug'ilgan yildan yo katta yo teng bo'ladi!!!\nQayta kiriting : ");
-            //            goto z;
-            //        }
-            //        Console.WriteLine($"Yosh farqi {Math.Abs(age - (nowYear - keschaBorn))}");
-            //        break;
-            //    default:
-            //        break;
-            //}
+            // obyekt yaratish va uning fieldlarini kiritish.
+            Animal kescha = new Animal();
+            Console.Write("Enter animal age : ");
+            kescha.Age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Eneter animal name : ");
+            kescha.Name = Console.ReadLine();
+
+            //methods 
+            kescha.CalculateAgeDifference(age, kescha.Age);
+            kescha.CompareAge(age, kescha.Age);
+            kescha.TellMeAboutFriends();
 
             
-
-            if (age < kescha.Age)
-            {
-                Console.WriteLine($"You are younger than {kescha.Name}");
-            }
-            else if (age == kescha.Age)
-            {
-                Console.WriteLine("You are equal");
-            }
-            else
-            {
-                Console.WriteLine($"You are older than {kescha.Name}");
-            }
 
             //string[] friendsName = { "Ali", "Vali", "Aziz" };
             //int[] friendsAge = { 10, 18, 12 };

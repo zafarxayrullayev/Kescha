@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Cache;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,18 +11,45 @@ namespace ClassLibrary1
     {
         public int Age { get; set; }
         public int AgeDifference { get; set; }
-        public int AnimalAge { get; set; }
+        public int UserAge { get; set; }
         public string Name { get; set; }
-
-        public Animal(int userAge) 
+        
+        
+        public void CalculateAgeDifference(int userAge, int animalAge)
         {
-            Console.WriteLine("Enter animal name!");
-            Name = Console.ReadLine();
-            Console.WriteLine("Enter animal age!");
-            Age = Convert.ToInt32(Console.ReadLine());
-            AgeDifference = Math.Abs(userAge - Age);
-             
-        } 
+            Console.WriteLine($"Sizning {Name} bilan yosh farqingiz {userAge - animalAge}");
+        }
+        
+        public void CompareAge(int userAge, int animalAge)
+        {
+            if (userAge < animalAge)
+            {
+                Console.WriteLine($"You are younger than {Name}");
+            }
+            else if (userAge == animalAge)
+            {
+                Console.WriteLine("You are equal");
+            }
+            else
+            {
+                Console.WriteLine($"You are older than {Name}");
+            }
+        }
+
+        public void TellMeAboutFriends()
+        {
+            string[] friendsName = new string[100];
+            Console.WriteLine("Enter your friends name");
+            for (int i = 0; i < 3; i++)
+            {
+                friendsName[i] = Console.ReadLine();
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"{friendsName[i]},   ");
+            }
+        }
 
     }
 }
