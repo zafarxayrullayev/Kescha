@@ -12,13 +12,13 @@ namespace ClassLibrary1
         public int Age { get; set; }
         public int AgeDifference { get; set; }
         public string Name { get; set; }
-        
-        
+
+
         public void CalculateAgeDifference(int userAge, int animalAge)
         {
             Console.WriteLine($"Sizning {Name} bilan yosh farqingiz {Math.Abs(userAge - animalAge)}");
         }
-        
+
         public void CompareAge(int userAge, int animalAge)
         {
             if (userAge < animalAge)
@@ -38,6 +38,11 @@ namespace ClassLibrary1
         public void Greet(string name, string surname, int age)
         {
             Console.WriteLine($"Hello {name} {surname}, Sizning yoshingiz {age} da ekanligini endi men bilaman!");
+        }
+
+        public void Greeting(string name)
+        {
+            Console.WriteLine($"Salom {name}");
         }
         public void TellMeAboutFriends(string userName)
         {

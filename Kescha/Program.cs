@@ -13,15 +13,14 @@ namespace Kescha
         static void Main(string[] args)
         {
 
-            Animal kescha = new Animal();
             string password;
-            // password section
+            // password section START
             do
             {
                 Console.Write("Parolni kirit : ");
                 password = Console.ReadLine();
             } while (password != "my");
-            // pasword section
+            // pasword section END 
 
             // introduction section START
             Console.Write("Enter your name : ");
@@ -30,22 +29,25 @@ namespace Kescha
             string userSurName = Console.ReadLine();
             Console.Write("Enter your age : ");
             int userAge = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine($"Hello {name} {firstName}, Sizning yoshingiz {age} da ekan");
-            kescha.Greet(userName, userSurName, userAge);
+            // introduction section END
 
-            // obyekt yaratish va uning fieldlarini kiritish.
+            Bird kescha = new Bird(); // create object in Animal class;
+            //Bird bird = new Bird();
+            Pet petCat = new Pet();
+            petCat.Name = Console.ReadLine();
+            petCat.Greeting(petCat.Name);
             
-            Console.Write("Enter animal age : ");
-            kescha.Age = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Eneter animal name : ");
-            kescha.Name = Console.ReadLine();
+            kescha.Greet(userName, userSurName, userAge);  // metod Greet 
+
+            Console.Write("Enter animal age : ");               // enter field
+            kescha.Age = Convert.ToInt32(Console.ReadLine());   // enter field
+            Console.Write("Eneter animal name : ");             // enter field
+            kescha.Name = Console.ReadLine();                   // enter field
 
             //methods 
             kescha.CalculateAgeDifference(userAge, kescha.Age);
             kescha.CompareAge(userAge, kescha.Age);
             kescha.TellMeAboutFriends(userName);
-
-
         }
     }
 }
